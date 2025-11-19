@@ -1,0 +1,26 @@
+package clase_2_PROGRAMADOR;
+
+import java.util.Scanner;
+
+public class Main2 {
+
+	public static void Main2(String[] args) {
+		/*
+		 *  Tengo que crear un programa que pida la edad, nombre y si es menor de edad imprima que
+		 *   puede ingresar de lo contrario no.
+		 */
+
+		Scanner datos = new Scanner (System.in);
+		System.out.println("Por favor escribe el nombre de usuario.");
+		String usuario = datos.nextLine();
+		System.out.println("Gracias, ahora digita tu edad.");
+		int edad = datos.nextInt();
+		if (edad >= 18) {
+			System.out.println("Oye "+usuario + ", eres mayor de edad, puedes entrar.");
+		}else {
+			System.out.println("Lo siento " + usuario + ", eres menor de edad, no puedes ingresar.");
+		}
+		datos.close();
+	}
+
+}
