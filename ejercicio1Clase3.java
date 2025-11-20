@@ -16,7 +16,13 @@ public class ejercicio1Clase3 {
 	String nacionalidad = datos.nextLine();
 	System.out.println("¿Tiene cedula?, escriba true ó false.");
 	boolean cedula = datos.nextBoolean();
+
+	// NOTA: tube un error en la verificacion de nacionalidad
+	// para textos nunca debemos usar (nacionalidad == "colombiano") ya que
+	// JAVA nunca lo detectara como si fuera el texto directamente
+	// debemos usar para verificacion de textos (.equalsIgnoreCase("el texto que debe cumplirse") ó equals("texto"))
 	
+		
 	if (edad >= 18 && nacionalidad.equalsIgnoreCase ("colombiano") && cedula) {
 		System.out.println("Puedes ingresar al sistema de votacion.");
 	}else if (edad >= 18 && !cedula) {
@@ -29,3 +35,4 @@ public class ejercicio1Clase3 {
 	 }datos.close();	
 	}
   }
+
